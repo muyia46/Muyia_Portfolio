@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <HEAD>
+    <title>My Personal Portfolio </title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background:#f0f5fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #263449;
+    line-height: 1.6;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    background: linear-gradient(135deg, navy,lightblue);
+    padding: 30px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    height: auto;
+}
+
+p {
+    color: gray;
+}
+
+h2 {
+    color: #1765a5;
+    font-size: 23px;
+    border-bottom: 2px solid #49a5df;
+    padding-bottom: 8px;
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: none;
+    max-width: 700px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid #2878bd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.13);
+}
+img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 25px auto;
+    border: 4px solid #2878bd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #1675bb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0b3c68;
+    text-decoration: underline;
+}
+
+.contact {
+    border-top: 4px solid #2878bd;
+}
+nav {
+    background: navy;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: lightblue;}
+    
+    .subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #1765a5;
+    font-weight: bold;
+    margin: 10px auto 30px;}
+    
+.intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 15px auto;
+    font-size: 16px;
+    color: #526477;
+}
+
+.hero-button {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.hero-button a {
+    display: inline-block;
+    background: #1765a5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.hero-button a:hover {
+    background: navy;
+    color: white;
+    text-decoration: none;
+}
+
+.skill {
+    margin: 20px 0;
+}
+
+.skill p {
+    font-weight: bold;
+    color: #263449;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 12px;
+    background: #dce6f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, navy, #49a5df);
+    border-radius: 10px;
+}
+
+.html {
+    width: 60%;
+}
+
+.css {
+    width: 30%;
+}
+
+.c {
+    width: 40%;
+}
+
+.problem {
+    width: 50%;
+}
+
+.project {
+    background: #f0f5fa;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 4px solid #2878bd;
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    color: #1765a5;
+    margin-top: 0;
+}
+
+.project p {
+    color: #526477;
+}
+
+.project span {
+    display: inline-block;
+    background: #dceafa;
+    color: #1765a5;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.contact-item {
+    background: #f0f5fa;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 4px solid #2878bd;
+}
+
+.contact-item h3 {
+    color: #1765a5;
+    margin-top: 0;
+}
+
+.contact-item p {
+    color: #526477;
+}
+
+.contact-link {
+    display: inline-block;
+    background: #1765a5;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: 0.3s ease;
+}
+
+.contact-link:hover {
+    background: navy;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background: navy;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+footer p {
+    color: white;
+    margin: 8px 0;
+}
+
+footer a {
+    display: inline-block;
+    color: lightblue;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive design for mobile devices */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+        padding: 25px 10px;
+    }
+
+    .card {
+        padding: 18px;
+        margin: 15px auto;
+    }
+
+    nav {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+</style>
+</HEAD>
+    <body>
+    <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+      <img src="./IMG_20261121_062153.jpg" alt="My Profile Photo">
+     <h1 id="home">Hello, I'm Muyia!</h1>
+
+<p class="subtitle">
+    Computer Science Student | MMUST
+    <br>
+    Aspiring Software Developer
+</p>
+
+<p class="intro">
+    I am passionate about technology, programming
+    and creating solutions through software development.
+</p>
+
+<div class="hero-button">
+    <a href="#projects">Explore My Projects</a>
+</div>
+
+      <div class="card">
+      <h2 id="about">About Me</h2>
+      <p> My name is Muyia, and I am a Computer Science student
+    at Masinde Muliro University of Science and Technology (MMUST).
+    I am passionate about technology, programming and web development.
+    I enjoy learning new skills and solving problems through technology.
+    My goal is to become a professional software developer.
+</p>
+      </div>
+
+<div class="card">
+    <h2 id="skills">My Skills</h2>
+
+    <p>My current technical skills and learning journey.</p>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="skill-bar">
+            <div class="skill-level html"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="skill-bar">
+            <div class="skill-level css"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>C Programming</p>
+        <div class="skill-bar">
+            <div class="skill-level c"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>Problem Solving</p>
+        <div class="skill-bar">
+            <div class="skill-level problem"></div>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="projects">
+    <h2>My Projects</h2>
+
+    <p>
+        Here are some of the projects I have worked on
+        during my learning journey.
+    </p>
+
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+            A personal website built using HTML and CSS
+            to showcase my skills, background and projects.
+        </p>
+        <span>HTML | CSS</span>
+    </div>
+
+    <div class="project">
+        <h3>My First HTML Page</h3>
+        <p>
+            One of my first web development exercises,
+            created while learning HTML fundamentals.
+        </p>
+        <span>HTML</span>
+    </div>
+
+    <div class="project">
+        <h3>Future Projects</h3>
+        <p>
+            I am continuously learning and working towards
+            building more advanced software projects.
+        </p>
+        <span>Coming Soon</span>
+    </div>
+</div>
+
+<div class="contact card" id="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        I'm always happy to connect with fellow developers,
+        students and technology enthusiasts.
+    </p>
+
+    <div class="contact-item">
+        <h3>Email</h3>
+        <p>Let's communicate through email.</p>
+        <a href="mailto:muyiasly@gmail.com" class="contact-link">
+            Send Me an Email
+        </a>
+    </div>
+
+    <div class="contact-item">
+        <h3>GitHub</h3>
+        <p>Explore my coding journey and projects.</p>
+        <a href="https://github.com/muyia46"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-link">
+            Visit My GitHub
+        </a>
+    </div>
+
+</div>
+<footer>
+    <p>Designed and Developed by Muyia</p>
+
+    <p>
+        &copy; 2026 Muyia.
+        All Rights Reserved.
+    </p>
+
+    <a href="#home">Back to Top ↑</a>
+</footer>
+
+    </body>
+    </html>
